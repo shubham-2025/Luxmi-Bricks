@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { NAV_LINKS, COMPANY_INFO } from "../lib/constants";
+import BrandLogo from "./BrandLogo";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -12,15 +13,14 @@ export default function Navbar() {
   // Monitor scroll for header background & top progress bar
   useEffect(() => {
     const handleScroll = () => {
-      // Background scroll
       setIsScrolled(window.scrollY > 20);
 
-      // Scroll progress percentage calculation
       const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
       if (totalHeight > 0) {
         setScrollProgress((window.scrollY / totalHeight) * 100);
       }
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -34,8 +34,8 @@ export default function Navbar() {
 
     const observerOptions = {
       root: null,
-      rootMargin: "-40% 0px -50% 0px", // triggers when section occupies the sweet middle spot
-      threshold: 0,
+      rootMargin: "-40% 0px -50% 0px",
+      threshold: 0
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -58,7 +58,7 @@ export default function Navbar() {
     const id = href.slice(1);
     const element = document.getElementById(id);
     if (element) {
-      const offset = 80; // height of the navbar
+      const offset = 80;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.scrollY - offset;
 
@@ -73,8 +73,7 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Scroll Progress Bar at very top of screen */}
-      <div 
+      <div
         className="fixed left-0 h-1 bg-gradient-to-r from-brick-primary via-orange-400 to-amber-300 z-[70] transition-all duration-100"
         style={{ width: `${scrollProgress}%`, top: isScrolled ? "0px" : "var(--announcement-bar-height, 0px)" }}
         id="scroll-progress-bar"
@@ -87,32 +86,24 @@ export default function Navbar() {
             ? "bg-stone-950/95 backdrop-blur-md border-b border-stone-850 py-3 shadow-lg"
             : "bg-transparent py-5"
         }`}
-        style={{ top: isScrolled ? "0px" : "var(--announcement-bar-height, 0px)" }} // fits clean and clear with or without announcement bar
+        style={{ top: isScrolled ? "0px" : "var(--announcement-bar-height, 0px)" }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
-            {/* Logo */}
             <a
               href="#home"
               onClick={(e) => handleLinkClick(e, "#home")}
-              className="flex items-center gap-2.5 group focus:outline-none"
+              className="flex items-center group focus:outline-none"
               id="navbar-logo"
             >
-              <div className="relative flex items-center justify-center w-10 h-10 rounded bg-brick-primary shadow-md group-hover:bg-brick-light transition-colors duration-200">
-                <span className="text-white text-xl font-display font-extrabold">L</span>
-                <div className="absolute -bottom-1 -right-1 w-4 h-2 bg-brick-dark rounded-sm border border-white/20"></div>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-white font-display text-base sm:text-lg font-bold tracking-tight leading-none group-hover:text-brick-light transition-all duration-200">
-                  {COMPANY_INFO.name}
-                </span>
-                <span className="text-brick-light text-[10px] font-semibold tracking-wider mt-0.5 font-display flex items-center gap-1">
-                  {COMPANY_INFO.hindiName} • Prayagraj
-                </span>
+              <div className="rounded-sm bg-stone-50/95 px-3 py-2 shadow-sm ring-1 ring-stone-200/70 transition-transform duration-200 group-hover:scale-[1.02]">
+                <BrandLogo
+                  variant="primary"
+                  className="h-12 sm:h-14 w-auto"
+                />
               </div>
             </a>
 
-            {/* Desktop Navigation */}
             <nav className="hidden xl:flex items-center gap-4 xl:gap-6" id="desktop-nav">
               <ul className="flex items-center gap-0.5 xl:gap-1.5 flex-nowrap shrink-0">
                 {NAV_LINKS.map((link) => (
@@ -139,7 +130,6 @@ export default function Navbar() {
                 ))}
               </ul>
 
-              {/* Action Button */}
               <a
                 href="#contact"
                 onClick={(e) => handleLinkClick(e, "#contact")}
@@ -151,7 +141,6 @@ export default function Navbar() {
               </a>
             </nav>
 
-            {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="xl:hidden p-2 rounded text-stone-300 hover:text-white hover:bg-stone-850 transition-colors focus:outline-none"
@@ -169,11 +158,9 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Mobile Drawer (Slide-In) */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <>
-            {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 0.5 }}
@@ -182,7 +169,6 @@ export default function Navbar() {
               onClick={() => setIsMobileMenuOpen(false)}
             />
 
-            {/* Drawer */}
             <motion.div
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
@@ -191,15 +177,12 @@ export default function Navbar() {
               className="fixed top-0 right-0 bottom-0 z-50 w-80 max-w-full bg-stone-950 border-l border-stone-850 p-6 flex flex-col justify-between shadow-2xl xl:hidden"
             >
               <div>
-                {/* Header inside drawer */}
                 <div className="flex items-center justify-between mb-8 pb-4 border-b border-stone-900">
-                  <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 rounded bg-brick-primary flex items-center justify-center font-bold text-white text-base">
-                      L
-                    </div>
-                    <span className="text-white font-display font-bold text-base">
-                      {COMPANY_INFO.name}
-                    </span>
+                  <div className="rounded-sm bg-stone-50 px-3 py-2 ring-1 ring-stone-200/70">
+                    <BrandLogo
+                      variant="primary"
+                      className="h-12 w-auto"
+                    />
                   </div>
                   <button
                     onClick={() => setIsMobileMenuOpen(false)}
@@ -210,7 +193,6 @@ export default function Navbar() {
                   </button>
                 </div>
 
-                {/* Nav list */}
                 <nav className="flex flex-col gap-1">
                   {NAV_LINKS.map((link) => (
                     <a
@@ -232,7 +214,6 @@ export default function Navbar() {
                 </nav>
               </div>
 
-              {/* Drawer Footer Info */}
               <div className="pt-6 border-t border-stone-900 flex flex-col gap-3">
                 <span className="text-stone-500 text-xs font-mono">PRAYAGRAJ INQUIRY</span>
                 <a
