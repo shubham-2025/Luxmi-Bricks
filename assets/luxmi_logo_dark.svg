@@ -1,0 +1,44 @@
+<svg width="600" height="320" viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg">
+  <title>LUXMI BRICK FIELD — Dark Logo</title>
+  <rect width="600" height="320" fill="#110500"/>
+
+  <!-- Icon block -->
+  <rect x="255" y="28" width="90" height="90" rx="6" fill="#2A0E00"/>
+  <!-- Row 1 -->
+  <rect x="263" y="36" width="35" height="14" rx="2" fill="#C4622D"/>
+  <rect x="301" y="36" width="35" height="14" rx="2" fill="#C4622D"/>
+  <!-- Row 2 -->
+  <rect x="263" y="53" width="16" height="14" rx="2" fill="#E07B4A"/>
+  <rect x="282" y="53" width="35" height="14" rx="2" fill="#E07B4A"/>
+  <rect x="320" y="53" width="16" height="14" rx="2" fill="#E07B4A"/>
+  <!-- Row 3 -->
+  <rect x="263" y="70" width="35" height="14" rx="2" fill="#C4622D"/>
+  <rect x="301" y="70" width="35" height="14" rx="2" fill="#C4622D"/>
+  <!-- Row 4 -->
+  <rect x="263" y="87" width="16" height="14" rx="2" fill="#E07B4A"/>
+  <rect x="282" y="87" width="35" height="14" rx="2" fill="#E07B4A"/>
+  <rect x="320" y="87" width="16" height="14" rx="2" fill="#E07B4A"/>
+  <!-- Gold bar -->
+  <rect x="255" y="113" width="90" height="5" fill="#C08030"/>
+
+  <!-- LUXMI -->
+  <text x="300" y="162" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="48" font-weight="700" fill="#FAF0E0" letter-spacing="12">LUXMI</text>
+
+  <!-- Rules with diamond -->
+  <line x1="60" y1="176" x2="264" y2="176" stroke="#C08030" stroke-width="1"/>
+  <rect x="296" y="172" width="8" height="8" rx="1" fill="#C08030" transform="rotate(45 300 176)"/>
+  <line x1="336" y1="176" x2="540" y2="176" stroke="#C08030" stroke-width="1"/>
+
+  <!-- BRICK FIELD -->
+  <text x="300" y="204" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="17" font-weight="400" fill="#C4622D" letter-spacing="10">BRICK  FIELD</text>
+
+  <!-- Hindi -->
+  <text x="300" y="232" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#8A5030" letter-spacing="2">लक्ष्मी भट्ठा  ·  प्रयागराज, उत्तर प्रदेश</text>
+
+  <!-- Double rule -->
+  <line x1="130" y1="250" x2="470" y2="250" stroke="#C08030" stroke-width="0.8"/>
+  <line x1="130" y1="254" x2="470" y2="254" stroke="#C08030" stroke-width="0.3"/>
+
+  <!-- Tagline -->
+  <text x="300" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7A5030" letter-spacing="4">EST. PRAYAGRAJ  ·  QUALITY BRICKS  ·  BULK SUPPLY</text>
+</svg>

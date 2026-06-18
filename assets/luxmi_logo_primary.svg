@@ -1,0 +1,40 @@
+<svg width="294" height="100" viewBox="0 0 294 100" xmlns="http://www.w3.org/2000/svg">
+  <title>LUXMI BRICK FIELD — Primary Logo</title>
+
+  <!-- Background -->
+  <rect width="294" height="100" fill="#F9F6F2"/>
+
+  <!-- Icon block -->
+  <rect x="10" y="10" width="76" height="76" rx="5" fill="#1C0800"/>
+  <!-- Row 1 -->
+  <rect x="18" y="18" width="28" height="11" rx="2" fill="#B84A1A"/>
+  <rect x="49" y="18" width="28" height="11" rx="2" fill="#B84A1A"/>
+  <!-- Row 2 -->
+  <rect x="18" y="32" width="13" height="11" rx="2" fill="#D4622A"/>
+  <rect x="34" y="32" width="28" height="11" rx="2" fill="#D4622A"/>
+  <rect x="65" y="32" width="12" height="11" rx="2" fill="#D4622A"/>
+  <!-- Row 3 -->
+  <rect x="18" y="46" width="28" height="11" rx="2" fill="#B84A1A"/>
+  <rect x="49" y="46" width="28" height="11" rx="2" fill="#B84A1A"/>
+  <!-- Row 4 -->
+  <rect x="18" y="60" width="13" height="11" rx="2" fill="#D4622A"/>
+  <rect x="34" y="60" width="28" height="11" rx="2" fill="#D4622A"/>
+  <rect x="65" y="60" width="12" height="11" rx="2" fill="#D4622A"/>
+  <!-- Gold bar -->
+  <rect x="10" y="82" width="76" height="4" rx="1" fill="#C08030"/>
+
+  <!-- Vertical divider -->
+  <line x1="98" y1="10" x2="98" y2="90" stroke="#D0C0B0" stroke-width="0.8"/>
+
+  <!-- LUXMI — starts x=110 -->
+  <text x="110" y="52" text-anchor="start" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="700" fill="#1C0800" letter-spacing="7">LUXMI</text>
+
+  <!-- Gold rule aligned to BRICK FIELD width (110 to 282) -->
+  <line x1="110" y1="61" x2="282" y2="61" stroke="#C08030" stroke-width="0.8"/>
+
+  <!-- BRICK FIELD -->
+  <text x="110" y="76" text-anchor="start" font-family="Georgia, 'Times New Roman', serif" font-size="12" font-weight="400" fill="#3A1800" letter-spacing="9.5">BRICK FIELD</text>
+
+  <!-- Hindi tagline -->
+  <text x="110" y="91" text-anchor="start" font-family="Arial, sans-serif" font-size="10" fill="#8A5030" letter-spacing="0.5">लक्ष्मी भट्ठा  ·  प्रयागराज, उ.प्र.</text>
+</svg>

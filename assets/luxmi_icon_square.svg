@@ -1,0 +1,21 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <title>LUXMI BRICK FIELD — Icon Mark</title>
+  <rect width="512" height="512" rx="60" fill="#1C0800"/>
+  <rect x="56" y="56" width="400" height="400" rx="30" fill="#2A0E00"/>
+  <!-- Row 1 -->
+  <rect x="80"  y="90"  width="155" height="65" rx="8" fill="#B84A1A"/>
+  <rect x="250" y="90"  width="155" height="65" rx="8" fill="#B84A1A"/>
+  <!-- Row 2 -->
+  <rect x="80"  y="170" width="72"  height="65" rx="8" fill="#D4622A"/>
+  <rect x="165" y="170" width="155" height="65" rx="8" fill="#D4622A"/>
+  <rect x="334" y="170" width="71"  height="65" rx="8" fill="#D4622A"/>
+  <!-- Row 3 -->
+  <rect x="80"  y="250" width="155" height="65" rx="8" fill="#B84A1A"/>
+  <rect x="250" y="250" width="155" height="65" rx="8" fill="#B84A1A"/>
+  <!-- Row 4 -->
+  <rect x="80"  y="330" width="72"  height="65" rx="8" fill="#D4622A"/>
+  <rect x="165" y="330" width="155" height="65" rx="8" fill="#D4622A"/>
+  <rect x="334" y="330" width="71"  height="65" rx="8" fill="#D4622A"/>
+  <!-- Gold bar bottom -->
+  <rect x="56" y="430" width="400" height="18" rx="0" fill="#C08030"/>
+</svg>
